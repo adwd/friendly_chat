@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 
 import 'chat_screen.dart';
+import 'home.dart';
 
 void main() {
   runApp(new FriendlychatApp());
@@ -15,7 +16,10 @@ class FriendlychatApp extends StatelessWidget {
       theme: defaultTargetPlatform == TargetPlatform.iOS
           ? kIOSTheme
           : kDefaultTheme,
-      home: new ChatScreen(),
+      home: new Home(),
+      routes: <String, WidgetBuilder>{
+        '/chat': (BuildContext context) => new ChatScreen(),
+      },
     );
   }
 }

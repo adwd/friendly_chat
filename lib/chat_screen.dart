@@ -111,8 +111,8 @@ class ChatScreenState extends State<ChatScreen> with TickerProviderStateMixin {
                       : new IconButton(
                           // 自動でdisabledColorになるらしいけどならない :innocent:
                           icon: new Icon(Icons.send),
-                          onPressed: () => _isComposing
-                              ? _handleSubmitted(_textController.text)
+                          onPressed: _isComposing
+                              ? () => _handleSubmitted(_textController.text)
                               : null))
             ],
           )),
