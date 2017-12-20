@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'chat_screen.dart';
 
 void main() {
   runApp(new FriendlychatApp());
@@ -10,57 +11,6 @@ class FriendlychatApp extends StatelessWidget {
     return new MaterialApp(
       title: "Friendlychat",
       home: new ChatScreen(),
-    );
-  }
-}
-
-class ChatScreen extends StatefulWidget {
-  @override
-  State createState() => new ChatScreenState();
-}
-
-class ChatScreenState extends State<ChatScreen> {
-  final TextEditingController _textController = new TextEditingController();
-
-  @override
-  Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text("Friendlychat"),
-      ),
-      body: _buildTextComposer(),
-    );
-  }
-
-  _handleSubmitted(String text) {
-    _textController.clear();
-  }
-
-  Widget _buildTextComposer() {
-    return new IconTheme(
-      // IconButtonを変更するためにIconThemeDataでラップする
-      data: new IconThemeData(color: Theme.of(context).accentColor),
-      child: new Container(
-          margin: const EdgeInsets.symmetric(horizontal: 8.0),
-          child: new Row(
-            children: <Widget>[
-              // FlexibleでTextFieldをラップして、Rowの余ったスペースいっぱいにTextFieldが広がるようにする
-              new Flexible(
-                  child: new TextField(
-                controller: _textController,
-                onSubmitted: _handleSubmitted,
-                decoration:
-                    new InputDecoration.collapsed(hintText: "Send a message"),
-              )),
-              // marginをつけたいのでIconButtonをContainerでラップする
-              new Container(
-                margin: new EdgeInsets.symmetric(horizontal: 4.0),
-                child: new IconButton(
-                    icon: new Icon(Icons.send),
-                    onPressed: () => _handleSubmitted(_textController.text)),
-              )
-            ],
-          )),
     );
   }
 }
