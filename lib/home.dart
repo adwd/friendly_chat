@@ -15,9 +15,16 @@ class Home extends StatelessWidget {
             ? new CupertinoButton(
                 child: new Text("Chat"),
                 onPressed: () => Navigator.of(context).pushNamed('/chat'))
-            : new IconButton(
-                icon: new Icon(Icons.send),
-                onPressed: () => Navigator.of(context).pushNamed('/chat'))
+            : new FlatButton(
+                child: new Text("Chat"),
+                onPressed: () => Navigator.of(context).pushNamed('/chat')),
+        Theme.of(context).platform == TargetPlatform.iOS
+            ? new CupertinoButton(
+                child: new Text("Camp"),
+                onPressed: () => Navigator.of(context).pushNamed('/camp'))
+            : new FlatButton(
+                child: new Text("Camp"),
+                onPressed: () => Navigator.of(context).pushNamed('/camp')),
       ],
     ));
   }

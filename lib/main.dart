@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 
 import 'chat_screen.dart';
 import 'home.dart';
+import 'camp.dart';
 
 void main() {
   runApp(new FriendlychatApp());
@@ -19,6 +20,7 @@ class FriendlychatApp extends StatelessWidget {
       home: new Home(),
       routes: <String, WidgetBuilder>{
         '/chat': (BuildContext context) => new ChatScreen(),
+        '/camp': (BuildContext context) => new Camp(),
       },
     );
   }
