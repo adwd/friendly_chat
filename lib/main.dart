@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 
-import 'chat_screen.dart';
-import 'home.dart';
-import 'camp.dart';
+import 'package:friendly_chat/chat_screen.dart';
+import 'package:friendly_chat/home.dart';
+import 'package:friendly_chat/camp/camp.dart';
 
 void main() {
   runApp(new FriendlychatApp());
@@ -33,6 +33,6 @@ final ThemeData kIOSTheme = new ThemeData(
 );
 
 final ThemeData kDefaultTheme = new ThemeData(
-  primarySwatch: Colors.purple,
+  primarySwatch: Colors.blue,
   accentColor: Colors.orangeAccent[400],
 );

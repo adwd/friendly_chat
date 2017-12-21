@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'package:friendly_chat/camp/title_section.dart';
+import 'package:friendly_chat/camp/button_section.dart';
+
 class Camp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -14,6 +17,8 @@ class Camp extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             new Text("camp"),
+            new TitleSection(),
+            new ButtonSection(),
           ],
         ));
   }
