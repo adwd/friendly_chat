@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
+import 'package:friendly_chat/camp/image_section.dart';
 import 'package:friendly_chat/camp/title_section.dart';
 import 'package:friendly_chat/camp/button_section.dart';
+import 'package:friendly_chat/camp/text_section.dart';
 
 class Camp extends StatelessWidget {
   @override
@@ -16,9 +18,10 @@ class Camp extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            new Text("camp"),
+            new ImageSection(),
             new TitleSection(),
             new ButtonSection(),
+            new TextSection(),
           ],
         ));
   }
